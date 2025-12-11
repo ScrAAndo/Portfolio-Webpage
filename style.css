@@ -4,6 +4,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
@@ -78,6 +79,12 @@ body {
 }
 
 .node_tree_button {
+    width: 55px;
+    height: 55px;
     background-color: rgb(147, 147, 240);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-194px, 40px)
 }
