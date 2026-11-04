@@ -1,0 +1,11 @@
+body {
+    background: #1f7ea3;
+background: linear-gradient(90deg, rgb(177, 215, 230) 0%, rgb(190, 229, 240) 31%, rgba(255, 255, 255, 1) 100%);
+}
+
+#bio {}
+
+#headshot {}
+
+.sociallink{}
+
