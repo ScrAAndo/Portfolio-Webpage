@@ -1,6 +1,6 @@
 body {
     background: #1f647f;
-
+    margin: 0;
 }
 
 .container {
@@ -37,9 +37,24 @@ body {
     height: auto;                /* Set your exact height */
     object-fit: cover;            /* Crops cleanly to fit the square without stretching */
   }
-#bio {}
 
-#headshot {}
+  
 
-.sociallink{}
-
+  .navbar {
+    background-color: rgb(12, 28, 7);
+    display: flex;
+    justify-content: flex-end; /* Pushes all links to the right side */
+    align-items: center;
+    gap: 30px;                 /* Space between each placeholder link */
+    padding: 20px 40px;        /* Top/bottom and left/right breathing room */
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;     /* Removes the default link underline */
+    font-size: 1.1rem;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+  }
