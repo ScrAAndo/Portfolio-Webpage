@@ -1,91 +1,247 @@
-body {
-    background: linear-gradient(to right, rgb(95, 194, 255), #2f5dac);
-    margin: 0;
+* {
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to right, rgb(8, 36, 54), rgb(7, 11, 28));
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+}
+
+/* Wireframe layout borders (remove this rule whenever you're ready to hide them) */
+.navbar,
+.box,
+.box-socials,
+.right-box,
+.right-box img,
+.media-panel,
+.info-header,
+.info-body,
+.section-divider,
+.instagram-section {
+  border: 2px solid white;
+}
+
+/* Top Navigation */
+.navbar {
+  background-color: rgb(7, 11, 28);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal fractional columns */
-    
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  padding: 24px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  gap: 12px;
+}
+
+.name-logo {
+  height: 150px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.box-socials {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.box-socials img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.right-box {
+  min-width: 0;
+  min-height: 400px;
+  background-image: url("assets/earth.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+}
+
+.right-box img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Timeline Bar */
+.timeline {
+  background-color: rgb(7, 11, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 18px 40px;
+}
+
+.timeline a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.timeline a:hover {
+  text-decoration: underline;
+}
+
+.timeline span {
+  opacity: 0.6;
+  user-select: none;
+}
+
+/* Portfolio & Project Rows */
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-row {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+}
+
+.media-panel {
+  padding: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header,
+.info-body {
+  padding: 20px 24px;
+}
+
+.info-header h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.info-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.info-body {
+  flex: 1;
+}
+
+.info-body p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Divider & Bottom Placeholder */
+.section-divider {
+  padding: 14px 24px;
+  text-align: center;
+}
+
+.section-divider p,
+.instagram-section p {
+  margin: 0;
+}
+
+.instagram-section {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+/* Stack columns cleanly on mobile */
+@media (max-width: 768px) {
+  .container,
+  .portfolio-row {
+    grid-template-columns: 1fr;
   }
-  
+
   .box {
-    padding: 10px;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;   /* Keeps h1, p, and socials stacked vertically */
-    justify-content: center;  /* Aligns the stack to the vertical middle of the container */
-    align-items: flex-end;    /* Keeps everything aligned to the right edge (next to the center line) */
-    text-align: right;        /* Keeps wrapped text right-aligned */
+    align-items: center;
+    text-align: center;
   }
 
-  .box-socials{
-    padding: 10px;
-    min-width: 0;
-    display: flex;
-  /* Keeps h1, p, and socials stacked vertically */
-    justify-content: center;  /* Aligns the stack to the vertical middle of the container */
-    align-items: flex-end;    /* Keeps everything aligned to the right edge (next to the center line) */
-    text-align: right;        /* Keeps wrapped text right-aligned */
-  }
-
-  
   .right-box {
-    min-width: 0;
-    background-image: url("assets/earth.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-    display: flex;
-    align-items: center;          /* Keeps the image vertically centered */
-    justify-content: flex-start;  /* Anchors it toward the left side of this box */
-    padding-left: 40px;           /* Adjust this value to nudge it closer/further from the seam */
-    min-height: 400px;
+    justify-content: center;
+    padding-left: 0;
   }
-  
-  .right-box img {
-    width: 250px;                 /* Set your exact width */
-    height: auto;                /* Set your exact height */
-    object-fit: cover;            /* Crops cleanly to fit the square without stretching */
-  }
+}
 
-  
+.VCUcontainer {
+  position: relative;
+  overflow: hidden;
+}
 
-  .navbar {
-    background-color: rgb(7, 11, 28);
-    display: flex;
-    justify-content: flex-end; /* Pushes all links to the right side */
-    align-items: center;
-    gap: 30px;                 /* Space between each placeholder link */
-    padding: 20px 40px;        /* Top/bottom and left/right breathing room */
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;     /* Removes the default link underline */
-    font-size: 1.1rem;
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline; /* Adds an underline on hover */
-  }
+.VCUcontainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/VCU_Hoodie_Design.PNG");
+  background-size: cover; /* Change to "contain" if you want the full graphic uncropped */
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Adjust between 0.1 and 1 depending on how bright the PNG is */
+  pointer-events: none;
+  z-index: 0;
+}
 
-  .timeline {
-    background-color: rgb(7, 11, 28);
-    display: flex;
-    justify-content: center; /* Pushes all links to the right side */
-    align-items: center;
-    gap: 30px;                 /* Space between each placeholder link */
-    padding: 20px 40px;
-  }
-  .timeline a {
-    color: white;
-    text-decoration: none;     /* Removes the default link underline */
-    font-size: 1.1rem;
-  }
-  
-  .timeline a:hover {
-    text-decoration: underline; /* Adds an underline on hover */
-  }
-
+/* Keeps both columns above the background graphic */
+.VCUcontainer > * {
+  position: relative;
+  z-index: 1;
+}
