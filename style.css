@@ -1,106 +1,44 @@
-<<<<<<< HEAD
 body {
     background: #1f7ea3;
-background: linear-gradient(90deg, rgb(177, 215, 230) 0%, rgb(190, 229, 240) 31%, rgba(255, 255, 255, 1) 100%);
+
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal fractional columns */
+    
+  }
+  
+  .box {
+    min-width: 0; /* Prevents oversized content (like long URLs) from breaking the equal split */
+  }
+  
+  .right-box {
+    min-width: 0;
+    background-image: url("assets/earth.jpg");
+    background-size: cover;       /* Scales the image to fill the entire div */
+  background-position: center;  /* Centers the image inside the div */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 400px;
+
+  }
+  
+  .right-box img {
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+    
+    object-fit: contain; 
+
+  }
 #bio {}
 
 #headshot {}
 
 .sociallink{}
 
-=======
-
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background-image: linear-gradient(to bottom, #f8f7f6, #89afe1);
-    background-attachment: fixed;
-}
-
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.left-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.pfp-wrapper {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-textblock {
-    border: 2px solid #333;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.pfp {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #333;
-    display: block;
-    position: relative;
-    z-index: 2;
-    transform: translateY(-18px);
-}
-
-.socials {
-    width: 34px;
-    height: 34px;
-    border-radius: 40%;
-    object-fit: cover;
-    background: #fff;
-    position: absolute;
-    z-index: 1;
-}
-
-.social-1 {
-    left: 10%;
-    bottom: -8%;
-    transform: translate(-50%, 50%);
-}
-
-.social-2 {
-    left: 50%;
-    bottom: -18%;
-    transform: translate(-50%, 50%);
-}
-
-.social-3 {
-    left: 90%;
-    bottom: -8%;
-    transform: translate(-50%, 50%);
-}
-
-.node_tree_button {
-    width: 55px;
-    height: 55px;
-    background-color: rgb(147, 147, 240);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-194px, 40px)
-}
->>>>>>> 0d0ad8b (Uploading images)
