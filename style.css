@@ -1,5 +1,5 @@
 body {
-    background: #1f647f;
+    background: linear-gradient(to right, rgb(95, 194, 255), #2f5dac);
     margin: 0;
 }
 
@@ -10,6 +10,7 @@ body {
   }
   
   .box {
+    padding: 10px;
     min-width: 0;
     display: flex;
     flex-direction: column;   /* Keeps h1, p, and socials stacked vertically */
@@ -17,6 +18,17 @@ body {
     align-items: flex-end;    /* Keeps everything aligned to the right edge (next to the center line) */
     text-align: right;        /* Keeps wrapped text right-aligned */
   }
+
+  .box-socials{
+    padding: 10px;
+    min-width: 0;
+    display: flex;
+  /* Keeps h1, p, and socials stacked vertically */
+    justify-content: center;  /* Aligns the stack to the vertical middle of the container */
+    align-items: flex-end;    /* Keeps everything aligned to the right edge (next to the center line) */
+    text-align: right;        /* Keeps wrapped text right-aligned */
+  }
+
   
   .right-box {
     min-width: 0;
@@ -41,7 +53,7 @@ body {
   
 
   .navbar {
-    background-color: rgb(12, 28, 7);
+    background-color: rgb(7, 11, 28);
     display: flex;
     justify-content: flex-end; /* Pushes all links to the right side */
     align-items: center;
@@ -58,3 +70,22 @@ body {
   .navbar a:hover {
     text-decoration: underline; /* Adds an underline on hover */
   }
+
+  .timeline {
+    background-color: rgb(7, 11, 28);
+    display: flex;
+    justify-content: center; /* Pushes all links to the right side */
+    align-items: center;
+    gap: 30px;                 /* Space between each placeholder link */
+    padding: 20px 40px;
+  }
+  .timeline a {
+    color: white;
+    text-decoration: none;     /* Removes the default link underline */
+    font-size: 1.1rem;
+  }
+  
+  .timeline a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+  }
+
