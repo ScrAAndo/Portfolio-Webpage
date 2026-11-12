@@ -1,5 +1,5 @@
 body {
-    background: #1f7ea3;
+    background: #1f647f;
 
 }
 
@@ -10,31 +10,32 @@ body {
   }
   
   .box {
-    min-width: 0; /* Prevents oversized content (like long URLs) from breaking the equal split */
+    min-width: 0;
+    display: flex;
+    flex-direction: column;   /* Keeps h1, p, and socials stacked vertically */
+    justify-content: center;  /* Aligns the stack to the vertical middle of the container */
+    align-items: flex-end;    /* Keeps everything aligned to the right edge (next to the center line) */
+    text-align: right;        /* Keeps wrapped text right-aligned */
   }
   
   .right-box {
     min-width: 0;
     background-image: url("assets/earth.jpg");
-    background-size: cover;       /* Scales the image to fill the entire div */
-  background-position: center;  /* Centers the image inside the div */
-  background-repeat: no-repeat; /* Prevents the image from tiling */
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 400px;
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    display: flex;
+    align-items: center;          /* Keeps the image vertically centered */
+    justify-content: flex-start;  /* Anchors it toward the left side of this box */
+    padding-left: 40px;           /* Adjust this value to nudge it closer/further from the seam */
+    min-height: 400px;
   }
   
   .right-box img {
-    width: 60%;
-    max-width: 300px;
-    height: auto;
-    
-    object-fit: contain; 
-
+    width: 250px;                 /* Set your exact width */
+    height: auto;                /* Set your exact height */
+    object-fit: cover;            /* Crops cleanly to fit the square without stretching */
   }
 #bio {}
 
